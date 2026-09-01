@@ -9,6 +9,8 @@ documents the mixed pair: **Apple M5 Max (Metal) + AMD Strix Halo (ROCm)**,
 joined by `ggml-rpc-server` over a Thunderbolt IP link. It is the setup behind
 the M5² benchmark card.
 
+![The pair on the desk: Bosgame M5 (Strix Halo) and the MacBook, Thunderbolt-joined](images/m5-macbook-desk.webp)
+
 ## The measured result (GLM-5.3-Flash 321B MoE, pp512 / tg128 tok/s)
 
 | quant | size | MacBook solo | Strix solo | split |
