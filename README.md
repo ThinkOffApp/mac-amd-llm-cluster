@@ -25,6 +25,19 @@ the M5² benchmark card.
 | IQ4_XS 4-bit | 157 GB | thrashes | won't fit | 161 / 15.6 |
 | Q4_K_XL 4.5-bit | 200 GB | won't fit | won't fit | **80 / 9.9** |
 
+> **Known issue — the Strix solo column undersells the hardware.** These rows were
+> measured with the box's factory BIOS setting: a fixed 64 GB VRAM carve-out that
+> splits the 128 GB of unified memory into two pools. Models larger than 64 GB
+> could not fit the GPU pool, so part of their layers ran on the CPU, and the
+> Strix solo numbers above are correspondingly low. On identically specced
+> hardware with the carve-out set to minimum (one contiguous ~120 GB region),
+> community measurements reach **14.6 tok/s decode** on GLM-5.3-Flash IQ2 via
+> ROCm (their Vulkan figure on the same box is 8.6) — roughly 2.5× the 5.8 in
+> this table. We will rerun the full table after that one BIOS change: expect
+> the Strix solo decode to move into the ~14–15 tok/s class, with likely gains
+> in the split rows too (larger GPU-resident share on the RPC device). Prompt
+> processing is less affected, and the MacBook column is unaffected.
+
 Measured ceilings: Metal working set 115 GB (M5 Max 128 GB), Strix pool 126 GB.
 The split is not free speed — when a model fits one machine, solo wins
 (483 vs 169 pp). The cable buys **existence** for models past your RAM line:
