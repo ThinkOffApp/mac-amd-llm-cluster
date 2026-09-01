@@ -11,7 +11,11 @@ the M5² benchmark card.
 
 ![The pair on the desk: Bosgame M5 (Strix Halo) and the MacBook, Thunderbolt-joined](images/m5-macbook-desk.webp)
 
+
 ## The measured result (GLM-5.3-Flash 321B MoE, pp512 / tg128 tok/s)
+
+![The M5-squared benchmark card](benchmarks/m5squared-card.png)
+
 
 | quant | size | MacBook solo | Strix solo | split |
 |---|---:|---:|---:|---:|
@@ -20,8 +24,6 @@ the M5² benchmark card.
 | Q3_K_XL 3-bit | 148 GB | thrashes | won't fit | 160 / 15.5 |
 | IQ4_XS 4-bit | 157 GB | thrashes | won't fit | 161 / 15.6 |
 | Q4_K_XL 4.5-bit | 200 GB | won't fit | won't fit | **80 / 9.9** |
-
-![The M5-squared benchmark card](benchmarks/m5squared-card.png)
 
 Measured ceilings: Metal working set 115 GB (M5 Max 128 GB), Strix pool 126 GB.
 The split is not free speed — when a model fits one machine, solo wins
