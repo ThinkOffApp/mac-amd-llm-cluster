@@ -1,0 +1,12 @@
+# systemd user unit for the RPC server (Strix/Linux side).
+# Install: cp to ~/.config/systemd/user/ && systemctl --user enable --now glm-rpc
+[Unit]
+Description=llama.cpp RPC server offering GPU+CPU to the Thunderbolt peer
+
+[Service]
+ExecStart=%h/llama.cpp/build/bin/ggml-rpc-server -H 10.55.0.2 -p 50052 -d ROCm0,CPU
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
