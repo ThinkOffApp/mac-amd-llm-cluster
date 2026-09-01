@@ -21,6 +21,8 @@ the M5² benchmark card.
 | IQ4_XS 4-bit | 157 GB | thrashes | won't fit | 161 / 15.6 |
 | Q4_K_XL 4.5-bit | 200 GB | won't fit | won't fit | **80 / 9.9** |
 
+![The M5-squared benchmark card](benchmarks/m5squared-card.png)
+
 Measured ceilings: Metal working set 115 GB (M5 Max 128 GB), Strix pool 126 GB.
 The split is not free speed — when a model fits one machine, solo wins
 (483 vs 169 pp). The cable buys **existence** for models past your RAM line:
